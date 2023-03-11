@@ -1,0 +1,34 @@
+.collection_container{
+    row-gap: 2rem;
+    justify-content: center;
+    margin: auto;
+}
+
+.collection_card{
+    position: relative;
+    background-color: var(--dark-color-lighten);
+    display: flex;
+    height: 328px;
+    padding: 2rem;
+    border-radius: .5rem;
+    transition: .3s;
+}
+.collection_data{
+    align-self: flex-end;
+}
+.collection_img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 230px;
+}
+.collection_name{
+    font-size: var(--bigger-font-size);
+    margin-bottom: .25rem;
+}
+.collection_description{
+    margin-bottom: var(--mb-1);
+}
+.collection_card:hover{
+    transform: translateY(-.5rem);
+}

@@ -1,0 +1,74 @@
+.categories_container {
+  margin: auto;
+  row-gap: 3rem;
+  align-content: center;
+}
+
+.categories_container form label {
+  display: block;
+  font-size: var(--h2-font-size);
+  margin-right: 1rem;
+}
+
+.categories_container form input {
+  font-size: var(--normal-font-size);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid var(--dark-color);
+ 
+  padding: 0.3rem 0.5rem 0.1rem 0.5rem;
+}
+.categories_container form input:focus {
+  border-bottom: 3px solid red;
+  
+}
+.categories_container form button {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  padding: 0.7rem 1rem;
+  border: none;
+  cursor: pointer;
+ 
+  transition: 0.3s;
+  margin:  auto;
+}
+.categories_container form button:hover {
+  transform: scale(0.95, 0.95);
+}
+
+.categories_list {
+  margin: auto;
+}
+.categories_item {
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+}
+.categories_item input {
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--dark-color-lighten);
+  color: var(--dark-color);
+  padding: 0.5rem 1rem;
+  width: 75%;
+  margin-top: 5px;
+  margin-right: 7px;
+  text-align: center;
+  font-size: var(--normal-font-size);
+}
+.categories_item i {
+  font-size: 1.5rem;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.categories_item i:nth-child(3) {
+  color: red;
+}
+.categories_item i:hover {
+  transform: scale(0.9, 0.9);
+}

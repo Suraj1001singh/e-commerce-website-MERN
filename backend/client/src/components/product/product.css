@@ -1,0 +1,60 @@
+
+  .sneakers {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--dark-color-lighten);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  .sneakers_sale {
+    position: absolute;
+    left: 0.5rem;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: var(--h2-font-size);
+    transform: rotate(-90deg);
+    letter-spacing: 0.1rem;
+  }
+  .sneaker_img {
+    width: 220px;
+    margin-top: var(--mb-1-5);
+    margin-bottom: var(--mb-3);
+    transform: var(--rotate-img);
+    filter: drop-shadow(0 12px 8px rgba(0, 0, 0, 0.6));
+  }
+  .sneaker_name,
+  .sneaker_price{
+    font-size: var(--h2-font-size);
+    letter-spacing: 0.1rem;
+    font-weight: var(--font-bold);
+  }
+  .sneaker_name {
+    margin-bottom: var(--mb-0-5);
+  }
+  .sneaker_price {
+    margin-bottom: var(--mb-1-5);
+  }
+  .sneakers:hover {
+    transform: translateY(-0.5rem);
+  }
+  .button_light {
+    display: inline-flex;
+    color: var(--dark-color);
+    font-weight: var(--font-semi-bold);
+    align-items: center;
+  }
+  .button_icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: 0.3s;
+  }
+  .button_light:hover .button_icon {
+    transform: translateX(0.25rem);
+  }
+  

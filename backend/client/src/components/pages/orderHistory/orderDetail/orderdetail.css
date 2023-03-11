@@ -1,0 +1,5 @@
+.orderdetail_product_img{
+    margin: auto;
+    height: 100px;
+    object-fit: cover;
+}

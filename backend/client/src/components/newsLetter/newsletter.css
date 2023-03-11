@@ -1,0 +1,37 @@
+.newsletter_container{
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 2rem .5rem;
+    border-radius: .5rem;
+    text-align: center;
+    margin: auto;
+
+}
+.newsletter_title{
+    font-size: var(--bigger-font-size);
+    margin-bottom: var(--mb-1);
+}
+.newsletter_description{
+    margin-bottom: var(--mb-2-5);
+}
+.newsletter_subscribe{
+    display: flex;
+    column-gap: .5rem;
+    background-color: var(--white-color);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+.newsletter_input{
+    outline: none;
+    border: none;
+    width: 90%;
+    font-size: var(--normal-font-size);
+    
+
+}
+.newsletter_input::placeholder{
+    color: var(--dark-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+}

@@ -1,0 +1,76 @@
+.sneakers2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--dark-color-lighten);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.sneaker_img2 {
+  width: auto;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-bottom: var(--mb-1);
+}
+.sneaker_name2,
+.sneaker_price2 {
+  font-size: var(--normal-font-size);
+  text-align: center;
+  font-weight: var(--font-medium);
+}
+.sneaker_name {
+  margin-bottom: var(--mb-0-5);
+  display: block;
+  overflow: hidden;
+}
+.sneaker_price2 {
+  margin-bottom: var(--mb-0-5);
+}
+
+.button_light {
+  display: inline-flex;
+  color: var(--dark-color);
+  font-weight: var(--font-semi-bold);
+  align-items: center;
+}
+.button_icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: 0.3s;
+}
+.button_light:hover .button_icon {
+  transform: translateX(0.25rem);
+}
+.product2_action {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.product2_action button {
+  border: none;
+  outline: none;
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  padding: 0.5rem 0.7rem;
+  max-width: 115px;
+  transition: 0.3s;
+  cursor: pointer;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 0 5px;
+}
+.product2_action button:hover {
+  transform: scale(0.96, 0.96);
+}
+.product2_action button:nth-child(1) {
+  background-color: red;
+}
+.product2_action button:nth-child(2) {
+  background-color: var(--dark-color);
+}

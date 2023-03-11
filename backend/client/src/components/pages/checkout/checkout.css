@@ -1,0 +1,110 @@
+.checkout_container {
+  margin: auto;
+  row-gap: 0.4rem;
+}
+.checkout_products {
+  display: grid;
+  row-gap: .5rem;
+}
+.checkout_product {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+.checkout_product_details {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.checkout_product_details h2 {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+.checkout_product_details span {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-5);
+}
+.remove_product {
+  background-color: var(--dark-color-lighten);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  cursor: pointer;
+}
+.trash_icon {
+  font-size: 1.34rem;
+  margin-right: 0.4rem;
+  color: red;
+}
+.checkout_product_img {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.checkout_product_img div {
+  background-color: var(--dark-color-lighten);
+  border-radius: 0.5rem;
+  margin-right: 0px;
+  height: 115px;
+  width: 115px;
+}
+.checkout_product_img div img {
+  padding: 0.3rem;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.subtotal div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+}
+.price_detail_text {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: var(--font-semi-bold);
+}
+.subtotal_key {
+  color: var(--dark-color);
+}
+.subtotal_value {
+  color: var(--dark-color);
+  font-weight: var(--font-semi-bold);
+}
+.boldlineseparator {
+  margin: 2rem 0;
+  display: block;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: var(--dark-color);
+}
+.checkout_btn {
+  margin-top: 1rem;
+}
+.product_qty input{
+  width: 3rem;
+  border: none;
+  outline: none;
+  margin-left: .5rem;
+
+}
+.product_qty input:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  outline: 1px solid red;
+  width: 91%;
+}

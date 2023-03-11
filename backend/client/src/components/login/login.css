@@ -1,0 +1,109 @@
+.login {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: -4rem;
+  height: calc(100vh + 4rem);
+  width: 100vw;
+  z-index: 999999;
+}
+.login_container {
+  margin: auto;
+}
+.login_box {
+  background: var(--white-color);
+  height: 400px;
+  width: 100%;
+  max-width: 430px;
+  margin:5rem  auto;
+  position: relative;
+  border-radius: 1rem;
+  /* overflow: hidden; */
+}
+.login_form {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+.form_titles {
+  /* min-width: 240px; */
+  max-width: 280px;
+  margin: auto;
+  position: relative;
+  border-radius: 30px;
+  border: 2px solid #ff61241f;
+  display: flex;
+  justify-content: space-between;
+}
+.form_titles a {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  position: relative;
+  font-weight: var(--font-medium);
+}
+.changecolor {
+  color: var(--white-color);
+  transition: 0.5s;
+}
+.form_titles div {
+  position: absolute;
+  background-color: var(--dark-color);
+  left: 0;
+  top: 0;
+  width: 140px;
+  height: 100%;
+  border-radius: 30px;
+  transition: 0.5s;
+  color: var(--white-color);
+}
+.input_group {
+  top: 150px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  transition: 0.5s;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.input_field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid var(--dark-color);
+  outline: none;
+  background: transparent;
+}
+.button_modify {
+  padding: 0.7rem;
+  width: 85%;
+  text-align: center;
+  border-radius: 30px !important;
+  margin-top: 2rem;
+  align-self: center;
+}
+.close_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  cursor: pointer !important;
+  z-index: var(--z-index);
+}
+#login {
+  /* left: 100%; */
+}
+
+#register {
+  left: 100%;
+  /* display: none; */
+}
