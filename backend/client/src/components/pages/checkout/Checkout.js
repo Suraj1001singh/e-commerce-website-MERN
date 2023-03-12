@@ -3,7 +3,8 @@ import "./checkout.css";
 import GlobalContext from "../../../context/GlobalContext";
 
 import axios from "axios";
-import PaypalButton from "../payment/paypal/PaypalButton";
+// import PaypalButton from "../payment/paypal/PaypalButton";
+import PayButton from "../../stripepayment/PayButton";
 const Checkout = () => {
   const [total, setTotal] = useState(0);
   const context = useContext(GlobalContext);
@@ -91,7 +92,7 @@ const Checkout = () => {
                   </div>
                   <div className="checkout_product_img">
                     <div>
-                      <img src={checkoutProduct.images[checkoutProduct.images.length-1].url} alt=""></img>
+                      <img src={checkoutProduct.images[checkoutProduct.images.length - 1].url} alt=""></img>
                     </div>
                     <span className="product_qty">
                       Qty:
@@ -142,7 +143,7 @@ const Checkout = () => {
             </div>
 
             <a href="#" className="button checkout_btn">
-              <PaypalButton total={total - 10} tranSuccess={tranSuccess}></PaypalButton>
+              <PayButton cartItems={cart} tranSuccess={tranSuccess}></PayButton>
             </a>
           </div>
         </div>
