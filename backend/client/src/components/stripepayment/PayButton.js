@@ -22,7 +22,7 @@ const PayButton = ({ cartItems, tranSuccess }) => {
         console.log(response.data);
         if (response.data.url) {
           //   tranSuccess();
-        //   window.location.href = response.data.url;
+          window.location.href = response.data.url;
         }
       })
       .catch((err) => console.log(err.message));

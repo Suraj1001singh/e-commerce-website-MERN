@@ -10,7 +10,13 @@ const path = require("path");
 const app = express();
 
 //-------------------------Middlewares--------------
-app.use(express.json());
+app.use((req, res, next) => {
+  if (req.originalUrl === "/api/webhook") {
+    next(); // Do nothing with the body because I need it in a raw state.
+  } else {
+    express.json()(req, res, next); // ONLY do express.json() if the received request is NOT a WebHook from Stripe.
+  }
+});
 app.use(cookieParser());
 app.use(cors());
 app.use(

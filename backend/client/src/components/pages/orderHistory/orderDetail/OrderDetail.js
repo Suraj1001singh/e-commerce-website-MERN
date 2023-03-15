@@ -9,7 +9,6 @@ const OrderDetail = () => {
   const [orderHistory] = state.userAPI.orderHistory;
   const [orderDetail, setOrderDetail] = useState([]);
 
-
   const params = useParams();
 
   //--------------------------------------------------------------
@@ -36,6 +35,7 @@ const OrderDetail = () => {
               <thead>
                 <tr>
                   <th>Name</th>
+                  <th>Contact</th>
                   <th>Address</th>
                   <th>Postal Code</th>
                   <th>COuntry Code</th>
@@ -43,10 +43,18 @@ const OrderDetail = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>{orderDetail.address.recipient_name}</td>
-                  <td>{orderDetail.address.line + "-" + orderDetail.address.city}</td>
-                  <td>{orderDetail.address.postal_code}</td>
-                  <td>{orderDetail.address.country_code}</td>
+                  <td>{orderDetail.address.name}</td>
+                  <td>
+                    {orderDetail.address.email} <br />
+                    {orderDetail.address.phone}
+                  </td>
+                  <td>
+                    {orderDetail.address?.address?.line1 + ", " + orderDetail?.address?.address?.line2}
+                    <br />
+                    {orderDetail.address?.address?.city + ", " + orderDetail?.address?.address?.state}
+                  </td>
+                  <td>{orderDetail.address?.address?.postal_code}</td>
+                  <td>{orderDetail.address?.address?.country}</td>
                 </tr>
               </tbody>
             </table>
@@ -62,22 +70,30 @@ const OrderDetail = () => {
               <tbody>
                 {orderDetail.cart.map((item) => {
                   return (
-                    <tr key={item._id}>
+                    <tr key={item?._id}>
                       <td>
                         <Link to={`/detail/${item._id}`}>
-                          <img className="orderdetail_product_img" src={item.images[item.images.length-1].url} alt=""></img>
-                          <span>{item.title}</span>
+                          {/* <img className="orderdetail_product_img" src={item.images[item.images.length - 1].url} alt=""></img> */}
+                          <span>{item?.title}</span>
                         </Link>
                       </td>
 
-                      <td>{item.quantity}</td>
-                      <td>$ {item.price * item.quantity}</td>
+                      <td>{item?.quantity}</td>
+                      <td>$ {item?.price * item?.quantity}</td>
                     </tr>
                   );
                 })}
+                <tr>
+                  <td>
+                    <h3> Total : </h3>{" "}
+                  </td>
+                  <td />
+                  <td>
+                    <h3> {orderDetail?.total} </h3>
+                  </td>
+                </tr>
               </tbody>
             </table>
-           
           </div>
         </section>
       )}
