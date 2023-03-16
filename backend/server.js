@@ -47,6 +47,7 @@ mongoose
   .then(() => console.log("connection successful"))
   .catch((e) => console.log("not connected", e));
 
+// client-side of the application is always served by the server-side
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {

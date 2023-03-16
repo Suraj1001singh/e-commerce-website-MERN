@@ -8,6 +8,7 @@ const Users = require("../models/userModel");
 // Create payment function
 
 const createPayment = async (customer, data) => {
+  console.log("hiii----------------------------------");
   const Items = JSON.parse(customer.metadata.cart);
   const newPayment = new Payments({
     user_id: customer.metadata.user_id,
