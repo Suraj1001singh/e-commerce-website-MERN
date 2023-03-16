@@ -48,12 +48,12 @@ mongoose
   .catch((e) => console.log("not connected", e));
 
 // client-side of the application is always served by the server-side
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+app.use(express.static("client/build"));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+// }
 
 const PORT = process.env.PORT || 7000;
 app.listen(PORT, () => {
