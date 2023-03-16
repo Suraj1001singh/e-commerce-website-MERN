@@ -55,7 +55,7 @@ const Header = () => {
           <i className="bx bxs-grid" onClick={handelOnClick}></i>
         </div>
         <Link to={"/"}>
-          <a className="nav_logo">Roby</a>
+          <a className="nav_logo">EasyCart</a>
         </Link>
 
         <div className={active ? "nav_menu show" : "nav_menu"} id="nav_menu">
