@@ -1,3 +1,5 @@
 assets/
 snips/
 projectsNotes.odt
+node_modules/
+.env
